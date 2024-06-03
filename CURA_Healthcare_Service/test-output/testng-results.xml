@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-06-04T01:46:48 IST" name="Default suite" finished-at="2024-06-04T01:47:04 IST" duration-ms="16075">
+    <groups>
+    </groups>
+    <test started-at="2024-06-04T01:46:48 IST" name="Default test" finished-at="2024-06-04T01:47:04 IST" duration-ms="16075">
+      <class name="CURA.Runner">
+        <test-method is-config="true" signature="setup()[pri:0, instance:CURA.Runner@20140db9]" started-at="2024-06-04T01:46:48 IST" name="setup" finished-at="2024-06-04T01:46:57 IST" duration-ms="8912" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="health()[pri:0, instance:CURA.Runner@20140db9]" started-at="2024-06-04T01:46:57 IST" name="health" finished-at="2024-06-04T01:47:04 IST" duration-ms="6718" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- health -->
+        <test-method is-config="true" signature="end()[pri:0, instance:CURA.Runner@20140db9]" started-at="2024-06-04T01:47:04 IST" name="end" finished-at="2024-06-04T01:47:04 IST" duration-ms="331" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- end -->
+      </class> <!-- CURA.Runner -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
