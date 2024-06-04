@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-03T11:15:34 IST" name="Default suite" finished-at="2024-06-03T11:17:27 IST" duration-ms="113242">
+  <suite started-at="2024-06-04T02:11:03 IST" name="Default suite" finished-at="2024-06-04T02:12:44 IST" duration-ms="100757">
     <groups>
     </groups>
-    <test started-at="2024-06-03T11:15:34 IST" name="Default test" finished-at="2024-06-03T11:17:27 IST" duration-ms="113242">
+    <test started-at="2024-06-04T02:11:03 IST" name="Default test" finished-at="2024-06-04T02:12:44 IST" duration-ms="100757">
       <class name="Bus.bus_terminal">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Bus.bus_terminal@2ea41516]" started-at="2024-06-03T11:15:34 IST" name="setUp" finished-at="2024-06-03T11:16:10 IST" duration-ms="36438" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Bus.bus_terminal@1c9b0314]" started-at="2024-06-04T02:11:03 IST" name="setUp" finished-at="2024-06-04T02:11:36 IST" duration-ms="32662" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="bookBusTicket()[pri:0, instance:Bus.bus_terminal@2ea41516]" started-at="2024-06-03T11:16:11 IST" name="bookBusTicket" finished-at="2024-06-03T11:17:27 IST" duration-ms="76337" status="PASS">
+        <test-method signature="bookBusTicket()[pri:0, instance:Bus.bus_terminal@1c9b0314]" started-at="2024-06-04T02:11:36 IST" name="bookBusTicket" finished-at="2024-06-04T02:12:43 IST" duration-ms="67520" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bookBusTicket -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Bus.bus_terminal@2ea41516]" started-at="2024-06-03T11:17:27 IST" name="tearDown" finished-at="2024-06-03T11:17:27 IST" duration-ms="381" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Bus.bus_terminal@1c9b0314]" started-at="2024-06-04T02:12:43 IST" name="tearDown" finished-at="2024-06-04T02:12:44 IST" duration-ms="482" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

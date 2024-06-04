@@ -64,7 +64,7 @@ public class bus_Tikit {
 		cheapestBus.findElement(By.xpath("//a[@class=\"btn btn-orange selectseatbutton\"]")).click();
 
 		// Wait for seat layout to load
-		Thread.sleep(5000); // Adjust the sleep time as necessary
+		 // Adjust the sleep time as necessary
 
 		// Select seats (maximum 6 seats or all if less than 6 available)
 		List<WebElement> availableSeats = driver.findElements(
@@ -74,11 +74,11 @@ public class bus_Tikit {
 			availableSeats.get(i).click();
 		}
 
-		Thread.sleep(2000);
+		
 
 		// Click on Proceed
 		driver.findElement(By.xpath("//input[@class='seatproceed']")).click();
-		Thread.sleep(2000);
+	
 		// wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"menu-item-12\"]/a")));
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(
@@ -98,7 +98,7 @@ public class bus_Tikit {
 				ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@name='payment_btnProceedPayment']")))
 				.click();
 
-		Thread.sleep(2000);
+	
 		WebElement pop = driver.findElement(By.xpath("/html/body/div[6]/div/div/div[1]"));
 		String text = pop.getText();
 		System.out.println(text);

@@ -9,19 +9,28 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class ecommeece {
-	public static void main(String[] args) throws InterruptedException {
+	private WebDriver driver;
+	private WebDriverWait wait;
+	@BeforeTest
+	public void setup() throws InterruptedException {
 
 		WebDriverManager.chromedriver().setup();
-		WebDriver driver = new ChromeDriver();
+	    driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
 		driver.manage().timeouts().pageLoadTimeout(25, TimeUnit.SECONDS);
 		driver.get("https://www.shoppersstack.com/");
 		driver.manage().window().maximize();
-		WebDriverWait wait = new WebDriverWait(driver, 5);
+		 wait = new WebDriverWait(driver, 5);
+	}
+		@Test
+		public void ecm() throws InterruptedException {
 		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//button[.='Login']")))).click();
 		// --------registration from---------- //
 //		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//span[.='Create Account']")))).click();
@@ -89,8 +98,12 @@ public class ecommeece {
  		  WebDriverWait stop=new WebDriverWait(driver, 5);
  		  stop.until(ExpectedConditions.visibilityOf(log));
  		  log.click();
-         
+		
 		
 	}
+		@AfterTest
+		public void end() {
+			driver.quit();
+		}
 
 }

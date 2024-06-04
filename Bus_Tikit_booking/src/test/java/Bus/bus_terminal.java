@@ -77,19 +77,19 @@ public class bus_terminal {
 		cheapestBus.findElement(By.xpath("//a[@class=\"btn btn-orange selectseatbutton\"]")).click();
 
 		// Wait for seat layout to load
-		Thread.sleep(5000); // Adjust the sleep time as necessary
+		 // Adjust the sleep time as necessary
 
 		// Select seats (maximum 3 seats or all if less than 3 available)
 		List<WebElement> availableSeats = driver.findElements(
 				By.xpath("//*[@id=\"subtab1\"]/table/tbody/tr[2]/td/div/table/tbody/tr/td[1]/div/table/tbody/tr/td"));
-		int seatsToSelect = Math.min(availableSeats.size(), 6);
+		int seatsToSelect = Math.min(availableSeats.size(), 12);
 		for (int i = 5; i < seatsToSelect; i++) {
 			availableSeats.get(i).click();
 		}
 
 		// Click on Proceed
 		driver.findElement(By.xpath("//input[@class='seatproceed']")).click();
-		Thread.sleep(5000);
+		
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(
 				By.xpath("//input[@class='payment_textName form-control pay-form-control']")))
@@ -106,7 +106,7 @@ public class bus_terminal {
 				ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@name='payment_btnProceedPayment']")))
 				.click();
 
-		Thread.sleep(2000);
+		
 		WebElement pop = driver.findElement(By.xpath("/html/body/div[6]/div/div/div[1]"));
 		String text = pop.getText();
 		System.out.println(text);
