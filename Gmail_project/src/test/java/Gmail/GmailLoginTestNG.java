@@ -33,8 +33,8 @@ public class GmailLoginTestNG {
 
 		driver.get("https://mail.google.com/");
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
 		wait = new WebDriverWait(driver, 60);
 
 	}
@@ -95,10 +95,20 @@ public class GmailLoginTestNG {
 
 					driver.findElement(By.xpath("//input[@type='file']"))
 							.sendKeys("C:\\Users\\MAHADEV\\Downloads\\Mahadev-Guchhait-FlowCV-Resume-20240416.pdf");
-					driver.findElement(By.xpath("//a[contains(@href, 'SignOut')]")).click();
+					wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[.='Send'])[3]")));
+					//send button
+					
+					wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[.='Send'])[3]"))).click();
+					
+					wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"gb\"]/div[2]/div[2]/div[3]/div[3]")));
+	
+					
+					wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(@href, 'SignOut')]"))).click();
 
 					WebElement myframe = driver.findElement(By.xpath("//iframe[@name='account']"));
-
+					
+                     
+                     
 					driver.switchTo().frame(myframe);
 					wait.until(ExpectedConditions.visibilityOfElementLocated(
 							By.xpath("//a[@aria-label='Important recommended actions available (opens a new tab)']")));
